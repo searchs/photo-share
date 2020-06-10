@@ -1,10 +1,16 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import {StyleSheet, Text, View} from "react-native";
+import logo from './assets/logo.png';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Image source={logo} style={{
+        width: 305,
+        height: 305
+      }}/>
+      <Text style={styles.brand}>fotoMI</Text>
+      <Text style={styles.tagline}>Share Fotos with Family!</Text>
     </View>
   );
 }
@@ -12,8 +18,18 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#f7fdff",
+    alignItems: "center",
+    justifyContent: "center"
   },
+  brand: {
+    fontSize: 40,
+    fontWeight: 'normal',
+    color: '#0018cc'
+  },
+  tagline: {
+    fontSize: 16,
+    fontWeight: 'normal',
+    color: '#0018cc'
+  }
 });
