@@ -8,8 +8,9 @@ import uploadToAnonymousFilesAsync from "anonymous-files";
 import { SplashScreen } from "expo";
 
 export default function App() {
-  SplashScreen.preventAutoHide();
-  setTimeout(SplashScreen.hide, 5000);
+  //delay splash screen to test UI
+  // SplashScreen.preventAutoHide();
+  // setTimeout(SplashScreen.hide, 5000);
   const [selectedImage, setSelectedImage] = React.useState(null);
 
   let openImagePickerAsync = async () => {
@@ -100,6 +101,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     padding: 5,
     borderRadius: 5,
+    textTransform: "uppercase",
   },
   buttonText: {
     fontSize: 15,
